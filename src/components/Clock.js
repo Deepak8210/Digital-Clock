@@ -59,6 +59,17 @@ const Clock = () => {
           <h1>{ampm}</h1>
         </span>
       </div>
+      <div className="date">
+        <span>
+          <h2>{currentTime.toLocaleString("en-US", { day: "2-digit" })}</h2>
+        </span>
+        <span>
+          <h2>{currentTime.toLocaleString("en-US", { month: "long" })}</h2>
+        </span>
+        <span>
+          <h2>{currentTime.getFullYear()}</h2>
+        </span>
+      </div>
     </div>
   );
 };
