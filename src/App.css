@@ -3,8 +3,6 @@
   padding: 0;
 }
 .App {
-  background: url("../images/back.jpg");
-  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;

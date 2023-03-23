@@ -1,4 +1,4 @@
-.clock {
+/* .clock {
   width: 50%;
   display: flex;
   padding: 1rem;
@@ -10,7 +10,6 @@
   text-transform: uppercase;
   color: white;
   letter-spacing: 15px;
-  margin-right: 110px;
 }
 .clock-time {
   display: flex;
@@ -42,14 +41,74 @@
 }
 .am-pm {
   display: flex;
+}
+.am_pm {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  border: none;
-  padding: 0;
 }
 .am-pm h1 {
   background-color: rgba(8, 110, 130, 0.3);
   padding: 0.5rem 0.8rem;
   border-radius: 5px;
   align-items: center;
+} */
+
+.clock {
+  width: 60%;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.title {
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  padding: 0.5rem;
+}
+.time-stamps {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.time-stamps > * {
+  border: 1px solid white;
+  flex: 1;
+  border-radius: 5px;
+}
+.time-stamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
+}
+.time-stamp span h1 {
+  font-size: 3rem;
+}
+.date {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  gap: 1rem;
+}
+
+@media (max-width: 460px) {
+  .date {
+    letter-spacing: 5px;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .date {
+    gap: 0.2rem;
+    letter-spacing: 0;
+  }
 }

@@ -34,31 +34,71 @@ const Clock = () => {
 
   return (
     <div className="clock">
-      <h2>Digital Clock</h2>
-      <div className="clock-time">
-        <div>
-          <span className="clocky hour">
+      <div className="title">
+        <h2>Digital Clock</h2>
+      </div>
+      <div className="time-stamps">
+        <div className="time-stamp">
+          <span>
             <h1>{hour}</h1>
           </span>
-          <span className="title">Hour</span>
+
+          <h3>Hour</h3>
         </div>
-        <div>
-          <span className="clocky hour">
+        <div className="time-stamp">
+          <span>
             <h1>{minute}</h1>
           </span>
-          <span className="title">Minutes</span>
+
+          <h3>minute</h3>
         </div>
-        <div>
-          <span className="clocky hour">
+        <div className="time-stamp">
+          <span>
             <h1>{second}</h1>
           </span>
-          <span className="title">Seconds</span>
+
+          <h3>Seconds</h3>
         </div>
 
-        <span className="am-pm">
-          <h1>{ampm}</h1>
-        </span>
+        <div className="time-stamp">
+          <h1 className="am-pm">{ampm}</h1>
+        </div>
       </div>
+      <div className="date">
+        <h2>{currentTime.toLocaleString("en-US", { day: "2-digit" })}</h2>
+        <h2>{currentTime.toLocaleString("en-US", { month: "long" })}</h2>
+        <h2>{currentTime.getFullYear()}</h2>
+      </div>
+      {/* <h2>Digital Clock</h2>
+
+      <div>
+        <div className="clock-time">
+          <div>
+            <span className="clocky hour">
+              <h1>{hour}</h1>
+            </span>
+            <span className="title">Hour</span>
+          </div>
+          <div>
+            <span className="clocky hour">
+              <h1>{minute}</h1>
+            </span>
+            <span className="title">Minutes</span>
+          </div>
+          <div>
+            <span className="clocky hour">
+              <h1>{second}</h1>
+            </span>
+            <span className="title">Seconds</span>
+          </div>
+          <div className="am_pm">
+            <span className="am-pm">
+              <h1>{ampm}</h1>
+            </span>
+          </div>
+        </div>
+      </div>
+
       <div className="date">
         <span>
           <h2>{currentTime.toLocaleString("en-US", { day: "2-digit" })}</h2>
@@ -69,7 +109,7 @@ const Clock = () => {
         <span>
           <h2>{currentTime.getFullYear()}</h2>
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };
